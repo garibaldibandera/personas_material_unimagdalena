@@ -5,6 +5,7 @@ public class Persona {
     private String nombre;
     private String apellido;
     private int foto;
+
     public Persona (String cedula, String nombre, String apellido, int foto){
         this.cedula=cedula;
         this.nombre=nombre;
@@ -43,7 +44,12 @@ public class Persona {
     public void setFoto(int foto) {
         this.foto = foto;
     }
+
     public void guardar(){
         Datos.guardar(this);
+    }
+
+    public void eliminar(){
+        Datos.eliminr(this);
     }
 }

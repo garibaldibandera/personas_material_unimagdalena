@@ -11,4 +11,15 @@ public class Datos {
     public static ArrayList<Persona> obtener(){
         return personas;
     }
+
+    public static void eliminr(Persona p){
+        for (int i = 0; i< personas.size(); i++) {
+            if (personas.get(i).getCedula().equals(p.getCedula())) {
+                personas.remove(i);
+                break;
+            }
+        }
+    }
+
+
 }
