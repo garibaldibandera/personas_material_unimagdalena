@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "132127843224",
+    "firebase_url": "https://personamaterialunimag.firebaseio.com",
+    "project_id": "personamaterialunimag",
+    "storage_bucket": "personamaterialunimag.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132127843224:android:805905bc47a7b0c06d81ed",
+        "android_client_info": {
+          "package_name": "com.example.personas_material"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132127843224-9qdothhe3mseem1dm5ng8o3afh5jqagu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personas_material",
+            "certificate_hash": "56a7bffdc8ad9756b1c2f34b405d640d594d13b4"
+          }
+        },
+        {
+          "client_id": "132127843224-sb6kjhft5uisq653i3tkdo2h7j045qtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2kaQ7IP4_RLyHRa-mNkhgiQAAHYIASsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132127843224-sb6kjhft5uisq653i3tkdo2h7j045qtu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
