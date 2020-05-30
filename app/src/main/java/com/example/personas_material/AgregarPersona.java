@@ -37,11 +37,11 @@ public class AgregarPersona extends AppCompatActivity {
         int foto;
         Persona persona;
         InputMethodManager imp=(InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        ced=cedula.getText().toString();
-        nom=nombre.getText().toString();
-        apell=apellido.getText().toString();
-        foto =foto_aleatoria();
-        persona =new Persona(ced, nom, apell, foto);
+        ced = cedula.getText().toString();
+        nom = nombre.getText().toString();
+        apell = apellido.getText().toString();
+        foto = foto_aleatoria();
+        persona = new Persona(ced, nom, apell, foto);
         persona.guardar();
         limpiar();
         imp.hideSoftInputFromWindow(cedula.getWindowToken(),0);

@@ -13,16 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.PersonaViewHolder>{
     private ArrayList<Persona> personas;
 
-    public AdaptadorPersona(ArrayList<Persona>personas){
+    public AdaptadorPersona(ArrayList<Persona> personas){
         this.personas=personas;
     }
 
 
     @Override
-    public AdaptadorPersona.PersonaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PersonaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_persona, parent, false);
         return new PersonaViewHolder(v);
     }
@@ -30,7 +32,7 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Pers
     @Override
     public void onBindViewHolder(@NonNull AdaptadorPersona.PersonaViewHolder holder, int position) {
         Persona p=personas.get(position);
-        holder.foto.setImageResource(p.getFoto());
+ //       holder.foto.setImageResource(p.getFoto());
         holder.cedula.setText(p.getCedula());
         holder.nombre.setText(p.getNombre());
         holder.apellido.setText(p.getApellido());
@@ -41,9 +43,8 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Pers
         return personas.size();
     }
 
-
     public static class PersonaViewHolder extends RecyclerView.ViewHolder{
-        private ImageView foto;
+//        private CircleImageView foto;
         private TextView cedula;
         private TextView nombre;
         private TextView apellido;
@@ -52,15 +53,14 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Pers
         public PersonaViewHolder(View itemView){
             super (itemView);
             v=itemView;
-            foto=v.findViewById(R.id.imgFoto);
+ //           foto=v.findViewById(R.id.imgFoto);
             cedula=v.findViewById(R.id.lblCedula);
-            cedula=v.findViewById(R.id.lblNombre);
-            cedula=v.findViewById(R.id.lblApellido);
+            nombre=v.findViewById(R.id.lblNombre);
+            apellido=v.findViewById(R.id.lblApellido);
 
 
         }
 
 
     }
-}
 }

@@ -7,6 +7,7 @@ public class Datos {
     public static void guardar(Persona p){
         personas.add(p);
     }
+
     public static ArrayList<Persona> obtener(){
         return personas;
     }
