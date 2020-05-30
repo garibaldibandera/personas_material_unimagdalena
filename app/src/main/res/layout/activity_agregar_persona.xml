@@ -51,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="guardar"
             android:text="@string/boton_guardar"
             android:textStyle="bold" />
 
@@ -60,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="limpiar"
             android:text="@string/boton_limpiar"
             android:textStyle="bold" />
     </LinearLayout>
