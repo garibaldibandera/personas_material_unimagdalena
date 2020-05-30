@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorPersona.
         Intent i;
         i=new Intent(MainActivity.this, AgregarPersona.class);
         startActivity(i);
-        finish();
+     //   finish();
     }
 
 
@@ -66,6 +66,6 @@ public class MainActivity extends AppCompatActivity implements AdaptadorPersona.
         intent=new Intent(MainActivity.this,DetallePesona.class);
         intent.putExtra("datos",bundle);
         startActivity(intent);
-        finish();
+      //  finish();
     }
 }
