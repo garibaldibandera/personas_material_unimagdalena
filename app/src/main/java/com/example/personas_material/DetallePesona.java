@@ -68,7 +68,6 @@ public class DetallePesona extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 p.eliminar();
                 onBackPressed();
-              //  Log.i("TAMAÑO DEL VECTOT", ""+Datos.obtener().size());
             }
         });
         builder.setNegativeButton(negativo, new DialogInterface.OnClickListener() {
