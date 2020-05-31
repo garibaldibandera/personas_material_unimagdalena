@@ -15,6 +15,7 @@ public class Datos {
     }
 
     public static void guardar(Persona p){
+        personas.add(p);
         databaseReference.child(db).child(p.getId()).setValue(p);
     }
 

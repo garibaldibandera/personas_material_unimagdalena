@@ -33,7 +33,7 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Pers
     @Override
     public void onBindViewHolder(@NonNull AdaptadorPersona.PersonaViewHolder holder, int position) {
         final Persona p=personas.get(position);
- //       holder.foto.setImageResource(p.getFoto());
+        holder.foto.setImageResource(p.getFoto());
         holder.cedula.setText(p.getCedula());
         holder.nombre.setText(p.getNombre());
         holder.apellido.setText(p.getApellido());
@@ -52,7 +52,7 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Pers
     }
 
     public static class PersonaViewHolder extends RecyclerView.ViewHolder{
-//        private CircleImageView foto;
+        private CircleImageView foto;
         private TextView cedula;
         private TextView nombre;
         private TextView apellido;
@@ -61,7 +61,7 @@ public class AdaptadorPersona extends RecyclerView.Adapter<AdaptadorPersona.Pers
         public PersonaViewHolder(View itemView){
             super (itemView);
             v=itemView;
- //           foto=v.findViewById(R.id.imgFoto);
+            foto=v.findViewById(R.id.imgFoto);
             cedula=v.findViewById(R.id.lblCedula);
             nombre=v.findViewById(R.id.lblNombre);
             apellido=v.findViewById(R.id.lblApellido);

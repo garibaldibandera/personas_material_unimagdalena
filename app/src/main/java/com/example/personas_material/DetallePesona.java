@@ -21,14 +21,14 @@ public class DetallePesona extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-  //      ImageView foto;
+        //ImageView foto;
         TextView cedula, nombre, apellido;
         Bundle bundle;
         Intent intent;
         String ced, nom, apell;
         //int foto;
 
-        //ImageView foto=findViewById(R.id.imgFotoDetalle);
+        ImageView foto=findViewById(R.id.imgFotoDetalle);
         cedula=findViewById(R.id.lblCedulaDetalle);
         nombre=findViewById(R.id.lblNombreDetalle);
         apellido=findViewById(R.id.lblApellidoDetalle);
@@ -36,17 +36,17 @@ public class DetallePesona extends AppCompatActivity {
         intent =getIntent();
         bundle =intent.getBundleExtra("datos");
 
-        //fot=bundle.getInt("foto");
+        int fot=bundle.getInt("foto");
         ced=bundle.getString("cedula");
         nom=bundle.getString("nombre");
         apell=bundle.getString("apellido");
 
-        //foto.setImagenResource(fot);
+        foto.setImageResource(fot);
         cedula.setText(ced);
         nombre.setText(nom);
         apellido.setText(apell);
 
-        p = new Persona(ced, nom, apell, 2); //fot
+        p = new Persona(ced, nom, apell, fot);
     }
 
     public void onBackPressed(){
