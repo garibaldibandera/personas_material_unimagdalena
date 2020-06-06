@@ -15,7 +15,7 @@ public class Datos {
     }
 
     public static void guardar(Persona p){
-        personas.add(p);
+        //personas.add(p);
         databaseReference.child(db).child(p.getId()).setValue(p);
     }
 
@@ -31,6 +31,8 @@ public class Datos {
             }
         }
     }
-
+    public static void setPersonas(ArrayList<Persona> personas){
+        personas = personas;
+    }
 
 }

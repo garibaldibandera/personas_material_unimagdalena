@@ -21,7 +21,7 @@ public class DetallePesona extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        //ImageView foto;
+       // ImageView foto;
         TextView cedula, nombre, apellido;
         Bundle bundle;
         Intent intent;
