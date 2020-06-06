@@ -17,6 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -59,7 +60,8 @@ public class MainActivity extends AppCompatActivity implements AdaptadorPersona.
                personas.clear();
                if (dataSnapshot.exists()){
                    for(DataSnapshot snapshot: dataSnapshot.getChildren()) {
-                       Persona p = snapshot.getValue(Persona.class);
+                       Persona p =  snapshot.getValue(Persona.class);
+                    /*   Log.d("nombre persona", p.getNombre());*/
                        personas.add(p);
                    }
                }
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements AdaptadorPersona.
 
             }
         });
+
+
     }
 
     public void agregar(View v){
@@ -88,10 +92,12 @@ public class MainActivity extends AppCompatActivity implements AdaptadorPersona.
         Bundle bundle;
 
         bundle =new Bundle();
+
+        bundle.putString("id",p.getId());
         bundle.putString("cedula",p.getCedula());
         bundle.putString("nombre",p.getNombre());
         bundle.putString("apellido",p.getApellido());
-        bundle.putInt("foto", p.getFoto());
+        //bundle.putInt("foto", p.getFoto());
 
         intent=new Intent(MainActivity.this,DetallePesona.class);
         intent.putExtra("datos",bundle);
